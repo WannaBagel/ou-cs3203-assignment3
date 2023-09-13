@@ -7,11 +7,17 @@ def adder(theList):
     for i in range(len(theList)):
         temp = temp + theList[i]
     return(temp)
+
 def productFinder(list):
     temp = 1
     for i in range(len(list)):
         temp = temp * list[i]
     return temp
+
+def reverse(the_list):
+    return the_list[::-1]
+
+
 def main():
     print("Welcome to assignment 3 \n")
     ourList = []
@@ -20,15 +26,16 @@ def main():
         
         if userInput.lower() == "stop":
             break
-        
+
         try:
             number = int(userInput)
             ourList.append(number)
+            
         except ValueError:
             print("Invalid input. Please enter a valid number or 'stop' to stop. \n")
-    user_choice = input("Type 'Adder' for addition or 'mult' for multiplication.' \n")
-    
+
     print(adder(ourList))
     print(productFinder(ourList))
+    print(reverse(ourList))
         
 main()
