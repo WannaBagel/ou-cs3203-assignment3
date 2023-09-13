@@ -6,5 +6,9 @@ def adder(theList):
         temp = temp + theList[i]
     print(temp)
 adder(theList)
-    
-    
+def productFinder(list):
+    temp = 1
+    for i in range(len(list)):
+        temp = temp * list[i]
+    return temp
+print(productFinder(theList))
